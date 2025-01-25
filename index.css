@@ -1,0 +1,57 @@
+@font-face {
+    font-family: '粉圓'; /*自定義字型名稱*/
+    src: url('fonts/jf-openhuninn-2.1.ttf') format('ttf');
+}
+/*導航欄的背景樣式*/
+nav {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background: #FFE7C1;
+    color: #845A07;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+}
+/*導航欄的樣式*/
+nav a {
+    color: #845A07;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+/*選定導航欄中滑鼠懸停效果*/
+nav a:hover {
+    background: #FDF4E6;
+    border-radius: 5px;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /*設置區段高度為視窗高度*/
+    overflow: hidden; /*隱藏超出範圍的內容*/
+    display: flex; /*啟用Flexbox*/
+    align-items: center; /*垂直置中*/
+    justify-content: center; /*水平置中*/
+}
+
+/*設置背景影片*/
+.video-background {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*確保影片充滿區段且不失真*/
+    z-index: -1; /*確保影片在內容區塊的下方*/
+}
+/*設置內容區塊模式*/
+.content {
+    position: relative;
+    z-index: 1; /*史內容顯示在影片上方*/
+    color: #845A07; /*文字顏色*/
+    text-align: center; /*文字置中*/
+    padding: 40px;
+    font-family: "粉圓", sans-serif;
+}
